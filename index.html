@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <!--INCLUDE REQUIRED EXTERNAL JAVASCRIPT AND CSS LIBRARIES-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.js"></script>
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.css">
+  
+  
+
+  <?!= include('jsCode'); ?>
+  <!--INCLUDE JavaScript.html FILE-->
+  <style>
+
+    table#data-table thead {
+      background-color: rgb(38, 38, 38);
+      color: white;
+    }
+    table#data-table tr {
+      cursor: pointer;
+      overflow: hidden;
+      /* this is what fixes the expansion */
+      text-overflow: ellipsis;
+      /* not supported in all browsers, but I accepted the tradeoff */
+      white-space: nowrap;
+    }
+
+    table#data-table tbody tr:not(.child):hover {
+      background-color: #4AB4F7;
+      color: white;
+    }
+
+    table#data-table th {
+      text-align: center;
+      padding: 5px;
+    }
+
+    /* table#data-table td.number {
+      text-align: right !important;
+    }
+
+    table#data-table td.staff-name {
+      text-align: center !important;
+    }
+
+    table#data-table td.no-nota {
+      text-align: center !important;
+    }  */
+
+    .page-item.active .page-link {
+      color: #fff !important;
+      background-color: #4AB4F7 !important;
+      border-color: #4AB4F7 !important;
+    }
+
+    .page-link {
+      color: #000 !important;
+      background-color: #fff !important;
+      border: 1px solid #dee2e6 !important;
+    }
+
+    .page-link:hover {
+      color: #fff !important;
+      background-color: #4AB4F7 !important;
+      border-color: #4AB4F7 !important;
+    }
+
+    div.container {
+      margin-bottom: 10px;
+    }
+  </style>
+  
+  <!-- <style>
+    table#data-table tr {
+      overflow: hidden;
+      /* this is what fixes the expansion */
+      text-overflow: ellipsis;
+      /* not supported in all browsers, but I accepted the tradeoff */
+      white-space: nowrap;
+    }
+
+    table#data-table th {
+      text-align: center;
+    }
+  </style> -->
+</head>
+
+<body>
+  <div class="container">
+    <br>
+    <div class="row">
+
+      <table id="data-table" class="table display" style="width: 100%">
+        <!-- TABLE DATA IS ADDED BY THE showData() JAVASCRIPT FUNCTION ABOVE -->
+      </table>
+
+    </div>
+  </div>
+</body>
+
+</html>
